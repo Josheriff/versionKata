@@ -2,6 +2,13 @@
 
 Este texto solo vale par aclararme las ideas, no tiene una utilidad final dentro del proyecto
 
+## Lo estaba haciendo mal:
+
+La idea es hacer TDD y me pongo a investigar lo que me depara el futuro.
+
+vuelta a empezar, comenzando con los test y luego ya veremos.
+
+
 ## Averiguacion sobre pypi
 
 -> url que devuelve un json con info sobre paquete:

@@ -11,4 +11,7 @@ with describe('Check if all given libraries are updated'):
 
     with context('Given an empty library list'):
         with it('return name of the program and outdated library list as nothing'):
-            expect(version_manager.check(A_REPO,AN_EMPTY_REQUIREMENTS_FILE)).to(equal("Repo Name has no outdated packages"))
+
+            result = version_manager.check(A_REPO,AN_EMPTY_REQUIREMENTS_FILE)
+
+            expect(result).to(equal("Repo Name has no outdated packages"))

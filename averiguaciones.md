@@ -8,6 +8,16 @@ La idea es hacer TDD y me pongo a investigar lo que me depara el futuro.
 
 vuelta a empezar, comenzando con los test y luego ya veremos.
 
+## Pasos que voy siguiendo para luego recuperar la idea
+
+[x] El caso mas sencillo: no hay nada en el requirements.txt
+[ ] Caso que todo esté actualizado (requiero llamar a espias para saber si se llama al metodo que lo chequea)
+[ ] Caso que haya una librería desactualizada (requiero llamar a espia para metodo, y saber que devuelve que algo no esta actualizado (doubles?))
+[ ] Caso mas de una librería está desactualizada.
+[ ] Caso no se encuentra el fichero de dependencias, debería devolver otro error diferente
+
+
+
 
 ## Averiguacion sobre pypi
 

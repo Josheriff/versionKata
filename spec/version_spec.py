@@ -15,9 +15,9 @@ with describe('Check if all given libraries are updated'):
         with it('return name of the program and outdated library list as nothing'):
 
             version_manager = VersionManager()
-            result = version_manager.check_file(A_REPO,AN_EMPTY_REQUIREMENTS_FILE)
+            result = version_manager.check_file(AN_EMPTY_REQUIREMENTS_FILE)
 
-            expect(result).to(equal("Repo Name has no outdated packages"))
+            expect(result).to(equal('this project has no package list'))
 
     with context('Given a library list with some element'):
         with before.each:
@@ -26,6 +26,6 @@ with describe('Check if all given libraries are updated'):
 
         with it('check if the method that check the list is called'):
 
-            self.version_manager.check_file(A_REPO, A_REQUIREMENTS_FILE_WITH_SOME)
+            self.version_manager.check_file(A_REQUIREMENTS_FILE_WITH_SOME)
 
             expect(self.check_repo.check_repository).to(have_been_called)

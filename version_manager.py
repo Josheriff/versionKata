@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
 
-class Colaborador(object):
-    def algo_que_debe_llamarse(self):
+class CheckRepo(object):
+    def check_repository(self):
         print 'soy un colaborador ou yeah'
         return 'soy un colaborador'
 
 class VersionManager(object):
 
-    def __init__(self, colaborador=None):
-        self.colaborador = colaborador
+    def __init__(self, check_repo=None):
+        self.check_repo = check_repo
 
- #   def check_version(self):
- #       return 'lala'
-
-
-    def check(self, repo, requirements):
-        if self.colaborador:
-            self.colaborador.algo_que_debe_llamarse()
+    def check_file(self, repo, requirements):
+        if self.check_repo:
+            self.check_repo.check_repository()
         return '{} has no outdated packages'.format(repo)

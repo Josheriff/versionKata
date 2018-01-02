@@ -10,6 +10,7 @@ class VersionManager:
         self.check_repo = check_repo
 
     def check_file(self, requirements):
+        if not requirements:
+            return 'this project has no package list'
         if self.check_repo:
             self.check_repo.check_repository()
-        return 'this project has no package list'

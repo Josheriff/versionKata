@@ -6,7 +6,7 @@ from doublex_expects import have_been_called
 from version_manager import VersionManager
 
 A_REPO = "Repo Name"
-AN_EMPTY_REQUIREMENTS_FILE = {}
+AN_EMPTY_REQUIREMENTS_LINE = None
 A_REQUIREMENTS_FILE_WITH_SOME = "jquery"
 
 with describe('Check if all given libraries are updated'):
@@ -15,7 +15,7 @@ with describe('Check if all given libraries are updated'):
         with it('return name of the program and outdated library list as nothing'):
 
             version_manager = VersionManager()
-            result = version_manager.check_file(AN_EMPTY_REQUIREMENTS_FILE)
+            result = version_manager.check_file(AN_EMPTY_REQUIREMENTS_LINE)
 
             expect(result).to(equal('this project has no package list'))
 

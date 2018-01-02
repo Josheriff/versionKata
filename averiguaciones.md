@@ -8,16 +8,34 @@ La idea es hacer TDD y me pongo a investigar lo que me depara el futuro.
 
 vuelta a empezar, comenzando con los test y luego ya veremos.
 
+
 ## Pasos que voy siguiendo para luego recuperar la idea
 
 [x] El caso mas sencillo: no hay nada en el requirements.txt
-[ ] Caso que todo esté actualizado (requiero llamar a espias para saber si se llama al metodo que lo chequea)
+[x] Caso que todo esté actualizado (requiero llamar a espias para saber si se llama al metodo que lo chequea)
 [ ] Caso que haya una librería desactualizada (requiero llamar a espia para metodo, y saber que devuelve que algo no esta actualizado (doubles?))
 [ ] Caso mas de una librería está desactualizada.
 [ ] Caso no se encuentra el fichero de dependencias, debería devolver otro error diferente
 
+### Refactors derivados de los pasos anteriores
 
+Aunque parezca increible el gestor de actualizaciones de paquetes, ¡¡¡ha tenido un problema de paquetes!!! (Bendita ironía)
 
+En mi infinita alegría, he dicho ¿Para que usar POO si esto son 4 funciones?
+
+- He tenido que usar POO porque los Spy() solo sé ponerlos sobre clases, que se instancias como espias.
+- Ademas estas clases espía las he tenido que sacar fuera de la clase principal como colaboradores.
+    - Lo cual me demuestra que el TDD ayuda a tomar decisiones de arquitectura y estructuración de código.
+- Al ir a empezar el caso de una sola librería desactualizada me doy cuenta que no estoy tratando bien la constante vacía que representa a un archivo vacío.
+    - si quiero chequear todos los paquetes tengo que ir uno por uno, esto es linea a linea... por lo tanto la constante es una linea vacia que no significa que sea None...
+    significa mas bien que la
+    ```
+    if line == '\n':
+        print "NO VALE ESTA LINEA"
+
+    ```
+- También he averiguado que en el caso de que el archivo no existiera el propio python devolvería el error... mas adelante debería capturarse y hacer algo con el para no interrumpir la ejecución
+y permitir la recursividad
 
 ## Averiguacion sobre pypi
 
